@@ -74,6 +74,15 @@
     #card .go { animation: none; }
     #toast.show { animation-name: toastFade; }
   }
+  #off { margin-top: 4px; font-size: 12px; opacity: 0; transition: opacity .4s ease; }
+  #off.on { opacity: .6; }
+  #inst {
+    position: absolute; top: 14px; right: 112px; cursor: pointer;
+    font: inherit; font-size: 13px; color: var(--fg);
+    background: transparent; border: 1.5px solid currentColor; border-radius: 999px;
+    padding: 5px 12px; opacity: .85;
+  }
+  #inst:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
 </style>
 </head>
 <body>
@@ -82,8 +91,10 @@
   <div id="hud">
     <div id="alt"><span id="num">0</span><span class="u"> m</span></div>
     <div id="best"></div>
+    <div id="off" aria-live="polite"></div>
   </div>
   <button id="snd" type="button" aria-pressed="true">Sound on</button>
+  <button id="inst" type="button" hidden>Install</button>
   <div id="toast" aria-live="polite"><b id="tt"></b><span id="ts"></span></div>
   <div id="card">
     <h1 id="title">Drift</h1>
@@ -716,9 +727,27 @@
 </script>
 
 <script>
-if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
-  window.addEventListener('load', function () { try { navigator.serviceWorker.register('sw.js'); } catch (e) {} });
-}
+(function () {
+  var off = document.getElementById('off'), inst = document.getElementById('inst'), dp = null;
+  if ('serviceWorker' in navigator && location.protocol.indexOf('http') === 0) {
+    navigator.serviceWorker.register('sw.js')
+      .then(function () { return navigator.serviceWorker.ready; })
+      .then(function () { return caches.has('drift-v3'); })
+      .then(function (ok) { if (ok && off) { off.textContent = 'Ready to play offline'; off.className = 'on'; } })
+      .catch(function () {});
+  }
+  window.addEventListener('beforeinstallprompt', function (e) { e.preventDefault(); dp = e; if (inst) inst.hidden = false; });
+  window.addEventListener('appinstalled', function () { if (inst) inst.hidden = true; });
+  if (inst) {
+    inst.addEventListener('pointerdown', function (e) { e.stopPropagation(); });
+    inst.addEventListener('click', function () {
+      inst.blur();
+      if (!dp) return;
+      dp.prompt();
+      dp.userChoice.then(function () { dp = null; inst.hidden = true; });
+    });
+  }
+})();
 </script>
 </body>
 </html>
