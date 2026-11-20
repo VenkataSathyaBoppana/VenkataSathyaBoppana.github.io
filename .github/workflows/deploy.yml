@@ -22,7 +22,7 @@ jobs:
       - name: Assemble static site
         run: |
           mkdir _site
-          cp index.html styles.css script.js Venkata_Boppana_Resume.pdf _site/
+          cp index.html styles.css Venkata_Boppana_Resume.pdf _site/
           cp -r drift _site/drift
 
       - uses: actions/configure-pages@v4
