@@ -18,7 +18,7 @@
       <nav aria-label="Primary">
         <a href="Venkata_Boppana_Resume.pdf">Résumé</a>
         <a href="https://github.com/VenkataSathyaBoppana" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/venkata-sathya-sai-jashwanth-boppana/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/venkataboppana/" target="_blank" rel="noopener">LinkedIn</a>
       </nav>
     </header>
 
@@ -26,6 +26,31 @@
       <p class="intro">
         I'm a data engineer in New Jersey. I build the pipelines and platforms that analytics depends on, and for the past couple of years the retrieval and agent systems that sit on top of them. I started in DevOps, so I care a lot about whether the thing still works on a bad Tuesday.
       </p>
+
+      <figure class="flow">
+        <svg viewBox="0 0 900 84" role="img" aria-label="Animated diagram: data moving from sources through bronze, silver and gold layers to agents and dashboards">
+          <line x1="20" y1="34" x2="880" y2="34" class="rail"/>
+          <g class="nodes">
+            <circle cx="20" cy="34" r="6" style="animation-delay:0s"/>
+            <circle cx="235" cy="34" r="6" style="animation-delay:2s"/>
+            <circle cx="450" cy="34" r="6" style="animation-delay:0s"/>
+            <circle cx="665" cy="34" r="6" style="animation-delay:2s"/>
+            <circle cx="880" cy="34" r="6" style="animation-delay:0s"/>
+          </g>
+          <g class="dots">
+            <circle cx="20" cy="34" r="4"><animateMotion dur="8s" repeatCount="indefinite" path="M0,0 H860"/></circle>
+            <circle cx="20" cy="34" r="4"><animateMotion dur="8s" begin="4s" repeatCount="indefinite" path="M0,0 H860"/></circle>
+          </g>
+          <g class="lbl">
+            <text x="2" y="72" text-anchor="start">Sources</text>
+            <text x="235" y="72" text-anchor="middle">Bronze</text>
+            <text x="450" y="72" text-anchor="middle">Silver</text>
+            <text x="665" y="72" text-anchor="middle">Gold</text>
+            <text x="898" y="72" text-anchor="end">Agents</text>
+          </g>
+        </svg>
+        <figcaption>The shape most of my work takes.</figcaption>
+      </figure>
 
       <h2>Work</h2>
 
@@ -59,20 +84,65 @@
       <p class="aside-line">Before that, a summer as a cloud data engineering intern at T-Mobile.</p>
 
       <h2>Built on the side</h2>
-      <ul class="plain">
-        <li>
-          <a href="drift/">Drift</a>
-          <span>A small balloon game: dodge things, climb. Works offline and installs like an app.</span>
-        </li>
-        <li>
-          <a href="https://github.com/VenkataSathyaBoppana/Databricks_Project_On_Formula1" target="_blank" rel="noopener">Formula 1 lakehouse</a>
-          <span>Seventy years of racing data in Databricks and PySpark, with incremental loads.</span>
-        </li>
-        <li>
-          <a href="https://github.com/VenkataSathyaBoppana/DataWareHouse_Activity" target="_blank" rel="noopener">Medallion warehouse</a>
-          <span>Bronze, silver and gold layers on Azure Synapse for activity-log data.</span>
-        </li>
-      </ul>
+
+      <article class="proj">
+        <div class="when">Game</div>
+        <div class="body">
+          <h3><a href="drift/">Drift</a></h3>
+          <p>A small balloon game: dodge things, climb. New dangers arrive every 50&nbsp;m. Works offline and installs like an app.</p>
+        </div>
+        <figure class="media phone">
+          <video muted loop playsinline preload="metadata" poster="media/drift-poster.jpg" aria-label="Screen capture of Drift: a red balloon dodging rows of spikes while climbing past 130 metres">
+            <source src="media/drift-capture.webm" type="video/webm">
+            <source src="media/drift-capture.mp4" type="video/mp4">
+          </video>
+          <figcaption>Autopilot run to 130&nbsp;m, recorded in the browser.</figcaption>
+        </figure>
+      </article>
+
+      <article class="proj">
+        <div class="when">Lakehouse</div>
+        <div class="body">
+          <h3><a href="https://github.com/VenkataSathyaBoppana/Databricks_Project_On_Formula1" target="_blank" rel="noopener">Formula 1 lakehouse</a></h3>
+          <p>Seventy years of racing data in Databricks and PySpark, with incremental loads.</p>
+        </div>
+        <figure class="media">
+          <svg viewBox="0 0 200 104" role="img" aria-label="Three animated speed traces over one lap, dipping at the braking zones">
+            <g class="grid"><line x1="8" y1="12" x2="192" y2="12"/><line x1="8" y1="54" x2="192" y2="54"/><line x1="8" y1="96" x2="192" y2="96"/></g>
+            <g class="trace"><path d="M8.0,37.2 L9.8,35.8 L11.7,34.4 L13.5,33.2 L15.4,32.3 L17.2,31.9 L19.0,32.6 L20.9,35.3 L22.7,41.0 L24.6,49.8 L26.4,60.3 L28.2,69.3 L30.1,73.4 L31.9,71.1 L33.8,63.9 L35.6,55.0 L37.4,47.6 L39.3,43.1 L41.1,41.3 L43.0,41.2 L44.8,41.9 L46.6,42.8 L48.5,43.6 L50.3,44.2 L52.2,44.6 L54.0,44.8 L55.8,44.7 L57.7,44.5 L59.5,44.2 L61.4,44.4 L63.2,45.4 L65.0,47.8 L66.9,52.1 L68.7,57.8 L70.6,63.7 L72.4,68.0 L74.2,68.8 L76.1,65.5 L77.9,58.9 L79.8,50.7 L81.6,43.0 L83.4,37.1 L85.3,33.4 L87.1,31.5 L89.0,31.0 L90.8,31.3 L92.6,32.1 L94.5,33.2 L96.3,34.4 L98.2,35.8 L100.0,37.2 L101.8,38.8 L103.7,40.8 L105.5,44.1 L107.4,50.2 L109.2,60.3 L111.0,73.7 L112.9,85.9 L114.7,85.9 L116.6,85.9 L118.4,74.0 L120.2,60.8 L122.1,50.8 L123.9,44.9 L125.8,41.7 L127.6,39.7 L129.4,38.2 L131.3,36.7 L133.1,35.3 L135.0,34.0 L136.8,32.8 L138.6,31.7 L140.5,30.9 L142.3,30.4 L144.2,30.4 L146.0,31.1 L147.8,33.1 L149.7,36.9 L151.5,42.6 L153.4,49.9 L155.2,57.6 L157.0,64.0 L158.9,67.2 L160.7,66.7 L162.6,63.0 L164.4,57.7 L166.2,52.6 L168.1,48.7 L169.9,46.4 L171.8,45.3 L173.6,45.0 L175.4,44.9 L177.3,44.8 L179.1,44.5 L181.0,44.0 L182.8,43.3 L184.6,42.4 L186.5,41.3 L188.3,40.0 L190.2,38.6 L192.0,37.2" pathLength="1" style="animation-delay:0.0s"/><path d="M8.0,32.8 L9.8,31.7 L11.7,30.8 L13.5,30.2 L15.4,29.8 L17.2,29.8 L19.0,30.4 L20.9,32.0 L22.7,35.4 L24.6,41.6 L26.4,51.0 L28.2,62.3 L30.1,72.7 L31.9,78.6 L33.8,78.0 L35.6,71.8 L37.4,63.0 L39.3,54.9 L41.1,49.4 L43.0,46.5 L44.8,45.4 L46.6,45.0 L48.5,44.8 L50.3,44.5 L52.2,44.0 L54.0,43.3 L55.8,42.4 L57.7,41.3 L59.5,40.2 L61.4,39.1 L63.2,38.6 L65.0,39.0 L66.9,40.9 L68.7,44.9 L70.6,50.6 L72.4,57.2 L74.2,62.6 L76.1,65.1 L77.9,63.6 L79.8,58.5 L81.6,51.6 L83.4,44.9 L85.3,39.7 L87.1,36.7 L89.0,35.5 L90.8,35.7 L92.6,36.5 L94.5,37.8 L96.3,39.1 L98.2,40.4 L100.0,41.6 L101.8,42.7 L103.7,43.7 L105.5,44.9 L107.4,46.9 L109.2,51.3 L111.0,59.4 L112.9,71.2 L114.7,83.0 L116.6,85.9 L118.4,84.7 L120.2,72.7 L122.1,58.4 L123.9,47.0 L125.8,39.8 L127.6,36.0 L129.4,33.8 L131.3,32.4 L133.1,31.4 L135.0,30.6 L136.8,30.0 L138.6,29.7 L140.5,29.7 L142.3,29.9 L144.2,30.5 L146.0,31.6 L147.8,33.3 L149.7,36.0 L151.5,40.3 L153.4,46.4 L155.2,54.0 L157.0,62.2 L158.9,69.2 L160.7,73.1 L162.6,73.0 L164.4,69.4 L166.2,63.6 L168.1,57.5 L169.9,52.3 L171.8,48.6 L173.6,46.2 L175.4,44.5 L177.3,43.3 L179.1,42.1 L181.0,40.9 L182.8,39.5 L184.6,38.1 L186.5,36.7 L188.3,35.3 L190.2,34.0 L192.0,32.8" pathLength="1" style="animation-delay:0.5s"/><path d="M8.0,30.0 L9.8,29.7 L11.7,29.7 L13.5,30.1 L15.4,31.1 L17.2,33.3 L19.0,37.5 L20.9,44.5 L22.7,54.6 L24.6,66.1 L26.4,75.9 L28.2,80.6 L30.1,78.7 L31.9,71.6 L33.8,62.5 L35.6,54.7 L37.4,49.5 L39.3,46.7 L41.1,45.5 L43.0,44.9 L44.8,44.4 L46.6,43.8 L48.5,43.0 L50.3,42.0 L52.2,40.9 L54.0,39.6 L55.8,38.4 L57.7,37.4 L59.5,37.0 L61.4,37.7 L63.2,40.2 L65.0,44.7 L66.9,50.9 L68.7,57.6 L70.6,62.9 L72.4,64.9 L74.2,62.9 L76.1,57.6 L77.9,50.9 L79.8,44.7 L81.6,40.2 L83.4,37.7 L85.3,37.0 L87.1,37.4 L89.0,38.4 L90.8,39.6 L92.6,40.9 L94.5,42.0 L96.3,43.0 L98.2,43.9 L100.0,44.6 L101.8,45.5 L103.7,47.6 L105.5,52.3 L107.4,61.0 L109.2,72.9 L111.0,83.7 L112.9,85.9 L114.7,81.3 L116.6,68.2 L118.4,54.2 L120.2,43.6 L122.1,37.3 L123.9,34.0 L125.8,32.2 L127.6,31.1 L129.4,30.4 L131.3,29.9 L133.1,29.7 L135.0,29.7 L136.8,30.0 L138.6,30.6 L140.5,31.6 L142.3,33.0 L144.2,35.1 L146.0,38.2 L147.8,42.9 L149.7,49.4 L151.5,57.3 L153.4,65.3 L155.2,71.6 L157.0,74.6 L158.9,73.6 L160.7,69.1 L162.6,62.8 L164.4,56.5 L166.2,51.3 L168.1,47.6 L169.9,45.1 L171.8,43.3 L173.6,41.8 L175.4,40.5 L177.3,39.1 L179.1,37.7 L181.0,36.3 L182.8,34.9 L184.6,33.6 L186.5,32.4 L188.3,31.4 L190.2,30.6 L192.0,30.0" pathLength="1" style="animation-delay:1.0s"/></g>
+          </svg>
+          <figcaption>Speed traces across a lap.</figcaption>
+        </figure>
+      </article>
+
+      <article class="proj">
+        <div class="when">Warehouse</div>
+        <div class="body">
+          <h3><a href="https://github.com/VenkataSathyaBoppana/DataWareHouse_Activity" target="_blank" rel="noopener">Medallion warehouse</a></h3>
+          <p>Bronze, silver and gold layers on Azure Synapse for activity-log data.</p>
+        </div>
+        <figure class="media">
+          <svg viewBox="0 0 200 104" role="img" aria-label="Three stacked layers, bronze, silver and gold, lighting up in turn from the bottom">
+            <g class="slabs">
+              <polygon points="22,74 160,74 178,94 40,94" style="animation-delay:0s"/>
+              <polygon points="22,46 160,46 178,66 40,66" style="animation-delay:.8s"/>
+              <polygon points="22,18 160,18 178,38 40,38" style="animation-delay:1.6s"/>
+            </g>
+            <g class="lbl2"><text x="48" y="88">bronze</text><text x="48" y="60">silver</text><text x="48" y="32">gold</text></g>
+          </svg>
+          <figcaption>Raw to curated, layer by layer.</figcaption>
+        </figure>
+      </article>
+
+      <h2>Outside work</h2>
+
+      <article class="proj">
+        <div class="when">Podcast</div>
+        <div class="body">
+          <h3><a href="https://podcastaddict.com/podcast/sarada-kaburlu-telugu-podcast/4714555" target="_blank" rel="noopener">Sarada Kaburlu</a></h3>
+          <p>A Telugu-language podcast that I produce.</p>
+        </div>
+      </article>
 
       <h2>Tools</h2>
       <p class="prose">Python, SQL and PySpark. Airflow, dbt and Kafka. Databricks and Snowflake across Azure, AWS and GCP. LangGraph, LangChain and MCP for agents. Terraform, Docker and GitHub Actions to ship it.</p>
@@ -90,5 +160,16 @@
     </footer>
   </div>
   <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+  <script>
+    (function () {
+      var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      document.querySelectorAll('.media video').forEach(function (v) {
+        if (reduce) { v.controls = true; return; }
+        new IntersectionObserver(function (es) {
+          es.forEach(function (e) { if (e.isIntersecting) v.play().catch(function () {}); else v.pause(); });
+        }, { threshold: .35 }).observe(v);
+      });
+    })();
+  </script>
 </body>
 </html>
